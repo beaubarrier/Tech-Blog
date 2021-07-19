@@ -1,0 +1,11 @@
+<!-- Loop over each object in the projects array -->
+{{#each notes as |note| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+
+      <a href="/project/{{note.id}}">{{note.name}}</a>
+    </h2>
+
+  </div>
+  {{/each}}
