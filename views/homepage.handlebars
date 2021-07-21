@@ -1,33 +1,9 @@
-{{!--
-<a href="/project/{{note.id}}">{{note.name}}</a>
---}}
+{{>leftAside}}
+
+{{>signUp}}
+
+{{>login}}
 
 
-{{!-- <div class="container"> --}}
-  <div class="row py-3 w-75 p-3">
-    <div class="col-3 order-2" id="sticky-sidebar">
-      <div class="sticky-top">
-        {{#each notes as |note|}}
-        <div class="noteTitle">
-          <a href="#" type="submit" id="{{note.id}}">{{note.title}}</a>
-        </div>
-        {{/each}}
-      </div>
-    </div>
 
-    {{!-- <div class="col  p-3">
-      <div class="card">
-        <div class="card-body">
-
-          <h5 class="card-title" id="noteTitle">Placeholder Title</h5>
-          <p id="noteText">Placeholder text</p>
-          <button id="delete">Delete</button>
-          {{!-- need to make javascript to populate the text areas --}}
-        </div>
-      </div>
-    </div>
-  </div> --}}
-  {{!-- {{>newNote}} --}}
-  {{>signUp}}
-  {{>login}}
-  <script src="../public/js/index.js"></script>
+<script src="../public/js/index.js"></script>

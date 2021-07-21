@@ -1,13 +1,22 @@
-<div class="col" id="main">
+<div class="col-md-6">
+    <h2>Signup</h2>
 
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email
-        ">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">password</label>
-        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Enter Password">
-    </div>
-    <button id="save">Sign In</button>
-</div>
+    <form class="form signup-form">
+        <div class="form-group">
+            <label for="name-signup">name:</label>
+            <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+            <label for="email-signup">email:</label>
+            <input class="form-input" type="text" id="email-signup" />
+        </div>
+        <div class="form-group">
+            <label for="password-signup">password:</label>
+            <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+    </form>
+
+    <script src="../../public/js/signUp.js"></script>
