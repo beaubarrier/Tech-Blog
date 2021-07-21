@@ -1,0 +1,32 @@
+{{!-- <div class="list-group">
+  <div class="list-group-item list-group-item-action active">
+    Saved Notes
+  </div>
+  {{#each notes as |note|}}
+
+  <h4>
+    <a href="/api/notes/{{note.id}}">{{note.title}}</a>
+  </h4>
+
+  <p>
+    <a href="/api/notes/{{note.id}}"></a>{{note.text}}
+  </p>
+  {{/each}}
+
+  <a href="../" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+
+</div>
+--}}
+
+
+<div class="container-fluid">
+
+  Notes
+  <br>
+  {{#each notes as |note|}}
+  <p>
+
+    <a type="submit" href="/api/notes/{{note.id}}">{{note.title}}</a>
+  </p>
+  {{/each}}
+</div>

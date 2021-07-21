@@ -1,0 +1,14 @@
+body {}
+
+.noteTitle {
+position: relative;
+
+}
+
+#noteText {
+    width: 700px;;
+}
+
+.col {
+    width:700px;
+}
