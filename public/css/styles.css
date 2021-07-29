@@ -1,4 +1,7 @@
-body {}
+body {
+
+    background-color: lawngreen;
+}
 
 .noteTitle {
 position: relative;
@@ -11,4 +14,46 @@ position: relative;
 
 .col {
     width:700px;
+}
+
+#loginPart {
+ display: flex; 
+   
+   justify-content: flex-start;
+   margin-right: 600px;
+
+
+}
+
+#signUpPart {
+ display: flex;
+justify-content: flex-end;
+margin-left: 800px;
+
+}
+
+#signUpLoginDiv {
+  display:flex;
+  
+   flex-direction: row;
+   justify-content: center;
+
+}
+
+#mainBody {
+      display:flex;
+  
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+#main {
+     
+  
+}
+
+#noteDisplay {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }

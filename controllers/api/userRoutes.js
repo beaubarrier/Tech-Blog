@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      console.log("sigun", req.session.user_id)
+      console.log("signUp", req.session.user_id)
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-
+    console.log(req.session.user_id);
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;

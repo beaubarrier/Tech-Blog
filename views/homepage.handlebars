@@ -1,9 +1,45 @@
-{{>leftAside}}
+<div id="mainBody">
+    <div class="col" id="main">
 
-{{>signUp}}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Note Title">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Text Body</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Enter Note Text"></textarea>
+        </div>
+        <button id="save">Save</button>
+    </div>
 
-{{>login}}
+
+
+    <div id="leftAside">
+        {{>leftAside}}
+    </div>
+
+
+</div>
+
+{{!--
+{{#if notes.length}}
+
+{{#each notes as |note|}}
+<div class="row mb-2">
+    <div class="col-md-8">
+        <h4>{{note.title}}</h4>
+        <p>{{note.text}}</p>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{note.id}}">DELETE</button>
+    </div>
+</div>
+{{/each}}
+</div>
+{{/if}} --}}
 
 
 
-<script src="../public/js/index.js"></script>
+
+<script src="/js/index.js"></script>
