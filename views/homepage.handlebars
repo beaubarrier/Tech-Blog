@@ -1,9 +1,9 @@
-<div id="mainBody">
-    <div class="col" id="main">
+<form class="form login-form" id="mainBody">
+    <div class="col" type="submit" id="main">
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Title</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Note Title">
+            <input type="input" class="form-control" id="exampleFormControlInput1" placeholder="Enter Note Title">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Text Body</label>
@@ -13,15 +13,20 @@
         <button id="save">Save</button>
     </div>
 
-
-
-    <div id="leftAside">
-        {{>leftAside}}
+    <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" type="submit" data-id="{{note.id}}">DELETE</button>
     </div>
 
+</form>
+<br><br>
+{{#if notes.length}}
+{{#each notes as |note|}}
+{{note.title}}<br>
+{{note.text}}
 
-</div>
-
+<br><br>
+{{/each}}
+{{/if}}
 {{!--
 {{#if notes.length}}
 
@@ -38,8 +43,6 @@
 {{/each}}
 </div>
 {{/if}} --}}
-
-
 
 
 <script src="/js/index.js"></script>

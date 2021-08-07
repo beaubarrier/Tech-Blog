@@ -23,9 +23,8 @@ const loginFormHandler = async (event) => {
     } else {
         alert('Enter an email and a password.');
     }
+
 };
 
-document
-    .querySelector('.login-form')
+document.querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
-
