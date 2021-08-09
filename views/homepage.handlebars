@@ -18,13 +18,13 @@
 
 </form>
 <br><br>
-<div id="noteBody">
+<div id="noteBody" class="deleteBtn">
     {{#if notes.length}}
     {{#each notes as |note|}}
     {{note.title}}<br>
     {{note.text}}
     <form class="col-md-4">
-        <button id="deleteBtn" class="btn btn-sm btn-danger" type="submit" data-id="{{note.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger " type="submit" data-id="{{note.id}}">DELETE</button>
     </form>
     <br><br>
     {{/each}}

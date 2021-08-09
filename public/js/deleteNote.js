@@ -1,7 +1,4 @@
-// delete function
-var deleteBtn = $("#deleteBtn");
-var noteBody = $("#noteBody");
-
+// delete a note
 async function deleteNoteHandler(event) {
     event.preventDefault();
 
@@ -15,7 +12,7 @@ async function deleteNoteHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace(`/api/notes`);
+            document.location.replace(`/`);
             alert('note deleted!');
         } else {
             alert(response.statusText + "womp womp");
@@ -24,4 +21,4 @@ async function deleteNoteHandler(event) {
     }
 }
 
-document.querySelector('.col-md-4').addEventListener('click', deleteNoteHandler);
+document.querySelector('.deleteBtn').addEventListener('click', deleteNoteHandler);
