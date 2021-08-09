@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Note } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newNote = await Note.create({

@@ -3,30 +3,33 @@
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Title</label>
-            <input type="input" class="form-control" id="exampleFormControlInput1" placeholder="Enter Note Title">
+            <input type="input" class="form-control" id="noteTitleInput" placeholder="Enter Note Title">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Text Body</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Enter Note Text"></textarea>
+            <textarea class="form-control" id="noteTextInput" rows="3" placeholder="Enter Note Text"></textarea>
         </div>
         <button id="save">Save</button>
     </div>
 
-    <div class="col-md-4">
+    {{!-- <div class="col-md-4">
         <button class="btn btn-sm btn-danger" type="submit" data-id="{{note.id}}">DELETE</button>
-    </div>
+    </div> --}}
 
 </form>
 <br><br>
-{{#if notes.length}}
-{{#each notes as |note|}}
-{{note.title}}<br>
-{{note.text}}
-
-<br><br>
-{{/each}}
-{{/if}}
+<div id="noteBody">
+    {{#if notes.length}}
+    {{#each notes as |note|}}
+    {{note.title}}<br>
+    {{note.text}}
+    <form class="col-md-4">
+        <button id="deleteBtn" class="btn btn-sm btn-danger" type="submit" data-id="{{note.id}}">DELETE</button>
+    </form>
+    <br><br>
+    {{/each}}
+    {{/if}}
+</div>
 {{!--
 {{#if notes.length}}
 
@@ -43,6 +46,3 @@
 {{/each}}
 </div>
 {{/if}} --}}
-
-
-<script src="/js/index.js"></script>
